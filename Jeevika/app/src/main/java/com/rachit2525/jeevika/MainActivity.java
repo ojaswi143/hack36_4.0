@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.registerBtn:
             {
                 Toast.makeText(this, "Register here!", Toast.LENGTH_SHORT).show();
+                openRegisterActivity();
                 break;
             }
             case R.id.deleteBtn:
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }
+    }
+    private void openRegisterActivity() {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
 }
